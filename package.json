@@ -1,0 +1,34 @@
+{
+  "name": "evt-emitter",
+  "version": "1.0.0",
+  "author": "Brian Mullan <bmullan91@gmail.com>",
+  "description": "node events module, with an evt-listener factory bundled.",
+  "main": "index.js",
+  "homepage": "https://github.com/bmullan91/evt-emitter",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bmullan91/evt-emitter.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "evt-emitter",
+    "evt-listener",
+    "events",
+    "emitter",
+    "listener",
+    "EventListener"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "evt-listener": "1.*.*"
+  },
+  "devDependencies": {
+    "mocha": "~1.21.5",
+    "chai": "~1.9.2",
+    "istanbul": "~0.3.2",
+    "coveralls": "~2.11.2",
+    "mocha-lcov-reporter": "0.0.1"
+  }
+}

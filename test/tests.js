@@ -9,18 +9,16 @@ var ourEmitter = new ourEventEmitter();
 
 describe('validation checks', function() {
 
+  it('should not overwrite the default events module', function() {
+    expect(EventEmitter.prototype.createListener).to.equal(undefined);
+  });
+
   it('should expose the same interface as the built in events module', function() {
-    var sameProperties = Object.keys(defaultEmitter).every(function(property) {
-      return (ourEmitter[property] !== undefined);
+    var sameInterface = Object.keys(defaultEmitter).concat(Object.keys(EventEmitter.prototype)).every(function(prop) {
+      return (typeof ourEmitter[prop] === typeof defaultEmitter[prop]);
     });
 
-    expect(sameProperties).to.be.true;
-
-    var sameMethods = Object.keys(Object.getPrototypeOf(defaultEmitter)).every(function(method) {
-      return ((ourEmitter[method].toString()) === (defaultEmitter[method].toString()));
-    });
-
-    expect(sameMethods).to.be.true;
+    expect(sameInterface).to.be.true;
   });
 
   it('should have the createListener factory which returns an EventListener', function() {

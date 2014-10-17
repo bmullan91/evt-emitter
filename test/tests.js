@@ -34,5 +34,9 @@ describe('validation checks', function() {
     //check out evt-listener's tests - https://github.com/bmullan91/evt-listener/tree/master/test
   });
 
+  it('should have expose the Class as a property - revealing module pattern', function() {
+    expect(ourEventEmitter.EventEmitter).to.equal(ourEventEmitter);
+  });
+
 });
 

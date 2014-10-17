@@ -1,5 +1,11 @@
-var EventEmitter = require('events').EventEmitter;
+var defaultEventEmitter = require('events').EventEmitter;
 var EventListener = require('evt-listener').EventListener;
+
+function EventEmitter() {
+  defaultEventEmitter.call(this);
+}
+
+EventEmitter.prototype = Object.create(defaultEventEmitter.prototype);
 
 EventEmitter.prototype.createListener = function(event) {
   return new EventListener(this, event);

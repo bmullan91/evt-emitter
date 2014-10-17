@@ -1,8 +1,10 @@
 var expect = require('chai').expect;
+//node's built in event's
 var EventEmitter = require('events').EventEmitter;
-var EventListener = require('evt-listener').EventListener;
-var ourEventEmitter = require('../');
 var defaultEmitter = new EventEmitter();
+
+//our emitter, the decorated version
+var ourEventEmitter = require('../');
 var ourEmitter = new ourEventEmitter();
 
 describe('validation checks', function() {
@@ -21,8 +23,15 @@ describe('validation checks', function() {
     expect(sameMethods).to.be.true;
   });
 
-  it('should have the createListener factory which returns EventListeners' function() {
-    //TODO
+  it('should have the createListener factory which returns an EventListener', function() {
+    expect(typeof ourEmitter.createListener).to.equal('function');
+
+    var EventListener = require('evt-listener').EventListener;
+    var listener = ourEmitter.createListener('eventName');
+
+    expect(listener).to.be.an.instanceof(EventListener);
+    expect(listener.emitter).to.equal(ourEmitter);
+    //check out evt-listener's tests - https://github.com/bmullan91/evt-listener/tree/master/test
   });
 
 });

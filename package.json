@@ -2,7 +2,7 @@
   "name": "evt-emitter",
   "version": "1.0.0",
   "author": "Brian Mullan <bmullan91@gmail.com>",
-  "description": "node events module, with an evt-listener factory bundled.",
+  "description": "Node's events module, with an evt-listener factory bundled.",
   "main": "index.js",
   "homepage": "https://github.com/bmullan91/evt-emitter",
   "repository": {

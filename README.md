@@ -55,4 +55,4 @@ eventNameListener.off();
 
 ##More information
 
-Check out [evt-listener's](https://github.com/bmullan91/evt-listener) documentation and tests.
+Check out [evt-listener](https://github.com/bmullan91/evt-listener)'s documentation and tests.

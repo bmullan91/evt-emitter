@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/bmullan91/evt-emitter.svg?branch=master)](https://travis-ci.org/bmullan91/evt-emitter) [![Coverage Status](https://coveralls.io/repos/bmullan91/evt-emitter/badge.png)](https://coveralls.io/r/bmullan91/evt-emitter)
+[![Build Status](https://travis-ci.org/bmullan91/evt-emitter.svg?branch=master)](https://travis-ci.org/bmullan91/evt-emitter) [![Coverage Status](https://img.shields.io/coveralls/bmullan91/evt-emitter.svg)](https://coveralls.io/r/bmullan91/evt-emitter?branch=master)
 
 #evt-emitter
 
@@ -20,9 +20,9 @@ Via npm, saving it as a dependency.
 
 We're going to compare how *events* and *evt-emitter* do the following:
 
-- create an event emitter
-- register an event listener
-- deregister the listener
+- Create an event emitter
+- Register an event listener
+- Deregister the listener
 
 ###Node's events module
 ```js
@@ -52,3 +52,7 @@ var eventNamelistener = events.createListener('eventName').on(function(payload) 
 //sometime later..
 eventNameListener.off();
 ```
+
+##More information
+
+Check out [evt-listener's](https://github.com/bmullan91/evt-listener) documentation and tests.

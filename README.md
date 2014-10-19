@@ -4,21 +4,21 @@
 
 ###What is it?
 
-Node's events module with a **createListener** factory method on it's prototype.
+Node's events module with a **createListener** factory method on its prototype.
 
 ###What does it do?
 
-It creates an instance of EventListener ([evt-listener](https://github.com/bmullan91/evt-listener)) without having to pass an event emitter parameter. See below for a comparison.
+It creates an instance of **EventListener** ([evt-listener](https://github.com/bmullan91/evt-listener)) without having to pass an event emitter parameter. See below for a comparison.
 
-#Install
+##Prerequisites
 
-Via npm, saving it as a dependency.
+Install it using npm, saving it as a dependency.
 
     npm i evt-emitter --save
 
 #Comparison
 
-We're going to compare how *events* and *evt-emitter* do the following:
+We're going to compare how events and evt-emitter do the following:
 
 - Create an event emitter
 - Register an event listener

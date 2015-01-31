@@ -1,22 +1,22 @@
 [![Build Status](https://travis-ci.org/bmullan91/evt-emitter.svg?branch=master)](https://travis-ci.org/bmullan91/evt-emitter) [![Coverage Status](https://img.shields.io/coveralls/bmullan91/evt-emitter.svg)](https://coveralls.io/r/bmullan91/evt-emitter?branch=master)
 
-#evt-emitter
+# evt-emitter
 
-###What is it?
+### What is it?
 
 Node's events module with a **createListener** factory method on its prototype.
 
-###What does it do?
+### What does it do?
 
 It creates an instance of **EventListener** ([evt-listener](https://github.com/bmullan91/evt-listener)) without having to pass an event emitter parameter. See below for a comparison.
 
-##Prerequisites
+## Prerequisites
 
 Install it using npm, saving it as a dependency.
 
     npm i evt-emitter --save
 
-#Comparison
+# Comparison
 
 We're going to compare how events and evt-emitter do the following:
 
@@ -24,7 +24,7 @@ We're going to compare how events and evt-emitter do the following:
 - Register an event listener
 - Deregister the listener
 
-###Node's events module
+### Node's events module
 ```js
 var EventEmitter = require('events').EventEmitter;
 var events = new EventEmitter();
@@ -40,7 +40,7 @@ events.on(eventName, eventNameListener);
 events.removeListener(eventName, eventNameListener);
 ```
 
-###evt-emitter
+### evt-emitter
 ```js
 var EventEmitter = require('evt-emitter').EventEmitter;
 var events = new EventEmitter();
@@ -53,6 +53,6 @@ var eventNamelistener = events.createListener('eventName').on(function(payload) 
 eventNameListener.off();
 ```
 
-##More information
+## More information
 
 Check out [evt-listener](https://github.com/bmullan91/evt-listener)'s documentation and tests.
